@@ -27,6 +27,9 @@
                 
                 <?php 
                     
+                    $username = "";
+                    $password = "";
+                
                     $host = "localhost";
 				    $login = "root";
 				    $pas = "";
@@ -43,27 +46,30 @@
                         $password = $_POST['password'];
                                              
                         if($username == ""){
-                            echo "Enter username";
+                            echo "<script>alert('Enter username')</script>";
                         }
                         else{
-                            $query = "SELECT username, password
+                            $query = "SELECT user_id, username, password
                                     FROM users
                                     where username = '".$username."'";
                             $user = mysqli_query($link, $query);
                             
                             if(mysqli_num_rows($user) == 0){
-                                echo "Wrong login";
+                                echo "<script>alert('Wrong login')</script>";
                             }
                             else{
                                 $row = mysqli_fetch_assoc($user);
                                 if($row['password'] == $password){
+                                    session_start();
+                                    $_SESSION['user_id'] = $row['user_id'];
                                     echo "<script>window.location.href = 'messanger.php';</script>";
                                 }else{
-                                    echo "Wrong password";
+                                    echo "<script>alert('Wrong password')</script>";
                                 }
                             }
-                            
                         }
+                        
+
                     }
                 ?>
                 

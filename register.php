@@ -52,13 +52,17 @@
                         $uresult = mysqli_query($link, $uquery);
                         
                         if($username == "" or $password == "" or $email == ""){
-                            echo "Write normal data wtf";
+                            //echo "<script>alert('')</script>";
                         }else if(mysqli_num_rows($uresult) > 0){
-                            echo "Username has already taken";
+                            echo "<script>alert('Username has already taken')</script>";
                         }else{
                             $query = "INSERT INTO `users`(`user_id`, `username`, `password`, `email`) VALUES (".$id.",'".$username."','".$password."','".$email."')";
                             mysqli_query($link, $query);
-                            echo "Registration is succsessfull";
+                            echo "<script>alert('Registration is sucsessful')</script>";
+                            
+                            $username = "";
+                            $password = "";
+                            $email = "";
                         }
                     }
                 ?>

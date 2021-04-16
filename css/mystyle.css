@@ -1,4 +1,4 @@
-h1, h3, p, label, input{
+h1, h3, p, label, input, li{
     font-family: "Montserrat", sans-serif;
 }
 
@@ -14,7 +14,13 @@ h1, h3, p, label, input{
     margin-bottom: 10px;
 }
 
-.form h1, h3{
+.form h1{
+    width: 100%;
+    max-width: 100px;
+    margin: auto;
+}
+
+.form h3{
     width: 100%;
     max-width: 100px;
     margin: auto;
@@ -30,7 +36,7 @@ h1, h3, p, label, input{
     margin: auto;
 }
 
-header, div, p, h1, h2, h3, body{
+header, div, p, h1, h2, h3, body, ul, li{
     margin: 0px;
 }
 
@@ -41,7 +47,6 @@ header img{
 }
 
 header{
-    margin-bottom: 10px;
     background-image: url("../img/message_header.jpg");
     height: 200px;
 }
@@ -62,4 +67,64 @@ header h3{
 
 body{
     background-color: rgb(140, 180, 250);
+}
+
+.messanger{
+    display: flex;
+    flex-direction: column;
+}
+
+.output{
+    height: 500px;
+}
+
+.input{
+    width: 100%;
+}
+
+.input-area{
+    display: flex;
+    flex-direction: row;
+}
+
+.input-area input{
+    width: 100px;
+}
+
+nav{
+	background-color: rgb(170, 210, 250);
+    width: 100%;
+}
+
+nav ul{
+	list-style: none;
+    padding: inherit;
+}
+
+nav li{
+	display: inline-block;
+	border-style: solid;
+	border-color: #F0F0F0;
+	border: 2px;
+    margin: auto;
+    
+}
+
+nav li:hover{
+    background-color: rgb(210, 220, 250)
+}
+
+nav a{
+	display: block;
+	padding: 1.0em;
+    text-decoration: none;
+    color: black;
+}
+
+textarea{
+    resize: none;
+}
+
+iframe{
+    overflow-y: hidden;
 }
