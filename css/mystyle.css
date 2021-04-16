@@ -1,0 +1,65 @@
+h1, h3, p, label, input{
+    font-family: "Montserrat", sans-serif;
+}
+
+.form .space{
+    width: 100%;
+    max-width: 100px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.form h1, h3{
+    width: 100%;
+    max-width: 100px;
+    margin: auto;
+}
+
+.space label{
+    margin-bottom: 5px;
+}
+
+.content{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+header, div, p, h1, h2, h3, body{
+    margin: 0px;
+}
+
+header img{
+    width: 100%;
+    max-height: 200px;
+    object-position: center;
+}
+
+header{
+    margin-bottom: 10px;
+    background-image: url("../img/message_header.jpg");
+    height: 200px;
+}
+
+header h1{
+    padding: 10 0 5 10px;
+}
+
+header h3{
+    padding: 0 0 5 10px;
+}
+
+.reg{
+    font-size: 12px;
+    color: gray;
+    text-decoration-line: underline;
+}
+
+body{
+    background-color: rgb(140, 180, 250);
+}
